@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Aureus</title>
+</head>
+<body>
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<img src="https://www.aureusimpact.org/wp-content/uploads/2020/09/Aureus-High-Res-Logo-1.png" width="500" height="500" class="center">
+<p style="text-align:center;" style="font-family:Times New Roman;" >Our goal is to eliminate domestic violence. The most significant factor in domestic violence is self worth. Through years of trial, research, collabs and re-calibrating, only coming of with the idea was the easy part.</p>
+
+<style>
+body {font-family: Arial;}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+<body>
+
+<h3>Login Tabs</h3>
+
+<div class="tab">
+  <button class="tablinks" onclick="GuestLogin(event, 'Student')">Students</button>
+  <button class="tablinks" onclick="GuestLogin(event, 'Parent')">Parents</button>
+  <button class="tablinks" onclick="GuestLogin(event, 'Teacher')">Teachers</button>
+  <button class="tablinks" onclick="GuestLogin(event, 'Administrators')">Administrators</button>
+</div>
+
+<div id="Student" class="tabcontent">
+  <h3>Student</h3>
+  <p>Student Login: </p>
+</div>
+
+<div id="Parent" class="tabcontent">
+  <h3>Parent</h3>
+  <p>Parent Login: </p> 
+</div>
+
+<div id="Teacher" class="tabcontent">
+  <h3>Teacher</h3>
+  <p>Teacher Login: </p>
+</div>
+
+<div id="Administrators" class="tabcontent">
+  <h3>Administrators</h3>
+  <p>Administrators Login: </p>
+</div>
+
+<script>
+function GuestLogin(evt, guestName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(guestName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
